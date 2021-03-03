@@ -1,15 +1,15 @@
 import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
-import App, { Props } from './App';
+import { Meta } from '@storybook/react/types-6-0';
+import App from './App';
+import CustomTemplate from './StorybookWrapper';
 
 export default {
-  title: 'Foo',
+  title: 'App',
 } as Meta;
 
-const Template: Story<Props> = (args) => <App {...args} />;
-
-export const Primary = Template.bind({});
+export const Primary = CustomTemplate.bind({});
 Primary.args = {
-  label: 'foo',
-}
+  hasPadding: true,
+  Component: App,
+};
