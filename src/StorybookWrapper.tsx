@@ -2,7 +2,7 @@ import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 
 interface CustomTemplateProps {
-  Component: React.FC;
+  Component: React.FC<any>;
   hasPadding?: boolean;
 }
 
